@@ -25,6 +25,15 @@
       
       return this.post('/rooms/'+ params.room_id +'/messages', post_data);
     };
+
+    /**
+     * 指定したチャットのメッセージを取得
+     */
+    ChatWork.prototype.getMessages = function(room_id) {
+      return this.get('/rooms/' + room_id + '/messages');
+    };
+    
+    
     
     /**
     * マイチャットへのメッセージを送信
